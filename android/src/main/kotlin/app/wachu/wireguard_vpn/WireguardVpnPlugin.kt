@@ -202,7 +202,6 @@ class WireguardVpnPlugin: FlutterPlugin, MethodCallHandler ,ActivityAware,Plugin
                             .parseAllowedIPs(params.tunnel.peerAllowedIp)
                             .parsePublicKey(params.tunnel.peerPublicKey)
                             .parseEndpoint(params.tunnel.peerEndpoint)
-                            .parsePreSharedKey(params.tunnel.peerPresharedKey)
                             .parsePersistentKeepalive("25")
                             .build()
                     )
@@ -309,8 +308,7 @@ class TunnelData(
     val privateKey: String,
     val peerAllowedIp: String,
     val peerPublicKey: String,
-    val peerEndpoint: String,
-    val peerPresharedKey:String
+    val peerEndpoint: String
 )
 
 class StateChangeData(

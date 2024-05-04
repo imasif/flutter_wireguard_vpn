@@ -7,13 +7,11 @@ class Tunnel {
   final String peerAllowedIp;
   final String peerPublicKey;
   final String peerEndpoint;
-  final String peerPresharedKey;
 
   /// Constructor of the [Tunnel] class that receives the [name] of the tunnel,
   /// the [address] IP address of the local, [listenPort] listen port,
   /// [dnsServer] DNS servers, [privateKey] server private key,
   /// [peerAllowedIp] allowed IP addresses, [peerEndpoint] server IP address,
-  /// [peerPresharedKey] server preshared key.
   Tunnel(
       {required this.name,
       required this.address,
@@ -22,8 +20,7 @@ class Tunnel {
       required this.privateKey,
       required this.peerAllowedIp,
       required this.peerPublicKey,
-      required this.peerEndpoint,
-      required this.peerPresharedKey});
+      required this.peerEndpoint});
 
   /// Method [toJson] to convert the class to JSON.
   Map<String, dynamic> toJson() => {
@@ -34,7 +31,6 @@ class Tunnel {
         'privateKey': privateKey,
         'peerAllowedIp': peerAllowedIp,
         'peerPublicKey': peerPublicKey,
-        'peerEndpoint': peerEndpoint,
-        'peerPresharedKey': peerPresharedKey
+        'peerEndpoint': peerEndpoint
       };
 }
